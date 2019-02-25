@@ -5,19 +5,57 @@
     <title>Greetings Library</title>
 </head>
 <body>
-    <div id = "loginForm">
-        <select id = "lang">
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
-        </select>
-        <input type="button" value="Login" id="login">
+
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">User Details</h5>
+                            <form class="form-signin" id="Userlogin">
+                                <div class="form-label-group">
+                                    <input type="text" id="firstName" class="form-control" placeholder="First Name" required autofocus>
+                                    <label for="firstName">First Name</label>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input type="text" id="lastName" class="form-control" placeholder="Last Name" required autofocus>
+                                    <label for="lastName">Last Name</label>
+                                </div>
+
+                                <select id = "lang" class="form-label-group">
+                                    <option value="en">English</option>
+                                    <option value="es">Spanish</option>
+                                </select>
+                                <br>
+
+                                <button type="button" value="Login" id="login" class="btn btn-lg btn-success btn-block text-uppercase" onclick="Submit()">Greet User</button>
+
+                                <br>
+                                <h5 id="error" style="display:none; text-align: center" >Invalid Credentials. Please retry</h5>
+
+                                <h2 id = 'greetings'></h2>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <h2 id = 'greetings'></h2>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 
     <script src="jQuery.js"></script>
     <script src = "Greetings.js"></script>
     <script src="app.js"></script>
+
+
+
 
 </body>
 </html>
